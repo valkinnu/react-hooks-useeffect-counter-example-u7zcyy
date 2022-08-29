@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-import React, { useState, useEffect } from 'react';
 
 function Counter() {
   const [counter, setCounter] = useState(0);
