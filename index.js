@@ -1,0 +1,26 @@
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import './style.css';
+import React, { useState, useEffect } from 'react';
+
+function Counter() {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    alert("Number of clicks: " + counter)
+  }, [counter]);
+
+  function increment() {
+    setCounter(counter+1);
+  }
+  return <div>
+  <p>{counter}</p>
+  <button onClick={increment}>Increment</button>
+  </div>;
+}
+
+const el = <Counter />; 
+ReactDOM.render(
+  el, 
+  document.getElementById('root')
+);
